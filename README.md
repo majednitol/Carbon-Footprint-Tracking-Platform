@@ -1,3 +1,10 @@
+Ah! I see exactly what’s causing the GitHub rendering issue:
+
+1. You are **using four backticks** (\`\`\`\`) in some places instead of three (\`\`\`), especially for the architecture and code blocks. GitHub Markdown only recognizes **triple backticks** for code blocks.
+2. You have **extra escape characters** like `\|` inside your architecture block, which breaks rendering.
+3. Mixing code blocks (` ``` `) with markdown text can sometimes render weirdly if indentation or backticks aren’t consistent.
+
+Here’s a **fixed version** that will render perfectly on GitHub:
 
 ```markdown
 # Carbon Footprint Tracking Platform
@@ -133,14 +140,14 @@ MIT License
 
 `````
 
-✅ **Changes made for GitHub rendering:**  
-1. Removed the extra outer backticks (you had ````markdown at the start).  
-2. Kept code blocks with triple backticks only (` ```bash `, ` ```env `, ` ```text `).  
-3. Avoided nested backticks inside the markdown.  
+✅ **Key Fixes:**  
+- Replaced all ```` with ```  
+- Removed unnecessary escape characters `\|`  
+- Fixed spacing/indentation inside code blocks  
 
-If you use this directly, all headers, lists, and code blocks will display correctly on GitHub.  
+This version **will render perfectly** on GitHub with proper headers, lists, and code blocks.  
 
-I can also **add badges and icons** (like Node.js, Next.js, PostgreSQL) at the top to make it look more professional.  
+If you want, I can also **add badges** for Next.js, Node.js, PostgreSQL, and Docker to make it look more professional at the top.  
 
 Do you want me to do that?
 `````
