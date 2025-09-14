@@ -1,10 +1,4 @@
-Ah! I see exactly what’s causing the GitHub rendering issue:
 
-1. You are **using four backticks** (\`\`\`\`) in some places instead of three (\`\`\`), especially for the architecture and code blocks. GitHub Markdown only recognizes **triple backticks** for code blocks.
-2. You have **extra escape characters** like `\|` inside your architecture block, which breaks rendering.
-3. Mixing code blocks (` ``` `) with markdown text can sometimes render weirdly if indentation or backticks aren’t consistent.
-
-Here’s a **fixed version** that will render perfectly on GitHub:
 
 ```markdown
 # Carbon Footprint Tracking Platform
