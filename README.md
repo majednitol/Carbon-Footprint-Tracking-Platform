@@ -1,6 +1,4 @@
 
-
-```markdown
 # Carbon Footprint Tracking Platform
 
 A full-stack carbon footprint tracking platform that allows users to log daily activities (transport, energy, food, waste, products) and calculate real-time CO₂ emissions. Includes interactive dashboards, AI-based recommendations, and carbon offset tracking.
@@ -132,4 +130,3 @@ Access the platform at `http://localhost:3000`
 
 MIT License
 
-`````
